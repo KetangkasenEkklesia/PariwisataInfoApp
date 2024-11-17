@@ -1,0 +1,88 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- FrameLayout untuk tumpukan gambar utama dan ikon kembali -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/header">
+
+        <!-- Gambar utama -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageview"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/padar_bajo"
+            app:shapeAppearanceOverlay="@style/BottomCurvedImage" />
+
+        <!-- Ikon kembali -->
+        <ImageView
+            android:id="@+id/backbutton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_margin="16dp"
+            android:src="@drawable/left_arrow"
+            android:contentDescription="Kembali"
+            android:background="@android:color/transparent"
+            android:layout_gravity="start|top" />
+    </FrameLayout>
+
+    <!-- ScrollView untuk konten -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:id="@+id/location"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Padar Island, Labuan Bajo"
+                    android:textSize="26dp"
+                    android:textStyle="bold"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <!-- Subjudul -->
+            <TextView
+                android:id="@+id/subjudul"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Kenal Lebih Jauh Wisata Pilihanmu"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <!-- Paragraf konten -->
+            <TextView
+                android:id="@+id/descdetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Pulau Padar, yang terletak di Taman Nasional Komodo, adalah destinasi yang sangat populer di Indonesia bagian timur. Pemandangan dari puncaknya yang terkenal memperlihatkan garis pantai berliku dengan pasir pantai berwarna putih, merah, dan hitam. Ini adalah lokasi yang sempurna untuk mendaki dan menikmati panorama luar biasa.\n\nLabuan Bajo, sebagai pintu gerbang ke Taman Nasional Komodo, juga menawarkan wisata kapal untuk menjelajahi pulau-pulau sekitarnya. Wisatawan dapat melihat komodo secara langsung di habitat aslinya, menjadikan perjalanan ini pengalaman yang sangat istimewa."
+                android:textSize="14sp"
+                android:lineSpacingExtra="2dp"
+                android:textColor="#555555" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

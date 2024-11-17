@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.PariwisataInfoApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+
+        <!-- Background aplikasi putih -->
+        <item name="android:windowBackground">@android:color/white</item>
+
+        <!-- Status bar transparan -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/white</item>
+        <item name="android:windowLightStatusBar">true</item> <!-- Ikon status bar gelap -->
+    </style>
+
+    <style name="Theme.PariwisataInfoApp" parent="Base.Theme.PariwisataInfoApp" />
+</resources>
